@@ -1,0 +1,21 @@
+/* Jumbotron */
+h1 {
+  background-color: rgb(255, 30, 0);
+  text-align: center;
+  color: white;
+  font-size: large;
+
+
+    
+}
+
+/* Team Cards */
+.card {
+background-color: cornflowerblue;
+color: white;
+
+}
+
+.list-group-item {
+    color: black;
+}

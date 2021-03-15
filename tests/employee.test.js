@@ -5,4 +5,20 @@ test('creates new employee name', async () => {
     const newEmployee = "Mitch";
     const newEmployeeObject = new Employee(name);
     expect(newEmployeeObject).toBe(newEmployee);
-  });
+  })
+
+  test('can create new employee ID', async () => {
+    const newEmployee = "Mitch";
+    const newEmployeeObject = new Employee(name);
+    expect(newEmployeeObject).toBe(newEmployee);
+  })
+
+  test('can create new employee email', async () => {
+    const newEmployee = "Mitch";
+    const newEmployeeObject = new Employee(name);
+    expect(newEmployeeObject).toBe(newEmployee);
+  })
+
+
+
+

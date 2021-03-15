@@ -12,8 +12,7 @@ const Manager = require('./library/manager');
 
 //make questions for team member (use node js mini project as solid example.)
 const promptUser = () =>
-  inquirer.prompt([
-    {
+  inquirer.prompt([{
       type: 'input',
       name: 'companyName',
       message: "Enter your Company's name",
@@ -33,4 +32,12 @@ const promptUser = () =>
       name: 'phoneManager',
       message: "Enter the Manager's phone number.",
     },
-  ]);
+  ])
+
+  .then((data) => {
+    const id = 1;
+    const manager = new Manager(data.name, id, data.email, data.officeNumber);
+    team.push(manager);
+    addMember();
+
+  });

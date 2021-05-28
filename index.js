@@ -38,28 +38,14 @@ const promptUser = () =>
 
 
   .then((data) => {
-    //Making sure an id is established 
-    const id = 1;
-
     //making const for manager to add new data 
-    const manager = new Manager(data.companyName, id, data.email, data.officePhoneNumber);
+    const manager = new Manager(data.companyName, data.id, data.email, data.officePhoneNumber);
     //using push to push new data to a new array
     teamMembers.push(manager);
-    
-    // //making const for engineer to add new data from module.exports Engineer 
-    // const engineer = new Engineer(data.companyName, id, data.email, data.github);
-    // //using push to push new data to a new array
-    // teamMembers.push(engineer);
-    
-    
-    
-    
     console.log(teamMembers);
-
-    //calling addNewTeamMember to actually trigger adding a new member 
-    // addNewTeamMember();
-    // console.log(data);
     
+    //calls add employee function to continue prompting the user.
+    addEmployee();
   }
     );
 
@@ -67,17 +53,36 @@ const promptUser = () =>
     promptUser();
 
     //Add new Employee function that includes:
-    function addEmployee() 
+    function addEmployee() {
     inquirer.prompt([
       {
         type: "list",
         name: "addEmployee",
         message: "Select from the options below",
-        options: ["Manager", "Engineer", "Intern", "N/A I do not want to create a new employee."],
+        choices: ["Manager", "Engineer", "Intern", "N/A I do not want to create a new employee."],
       },
     
     ])
-    addEmployee();
+        
+      .then((data) => {
+
+
+        if (data.addEmployee === 'Manager') {
+          addManager();
+        }
+        else if (data.addEmployee === 'Engineer') {
+          addEngineer();
+        }
+        else if (data.addEmployee === 'Intern') {
+          addIntern();
+        } 
+        
+        else return;
+
+      }
+       )
+
+  }
 
 
     //Add new Manager
@@ -107,63 +112,19 @@ const promptUser = () =>
         message: "Enter the Manager's Phone Number.",
       },
     
-    ]);
-
-
-    //Add new Engineer 
-    const addEngineer = () =>  
-    inquirer.prompt([
-      {
-        type: "input",
-        name: "Engineer",
-        message: "Enter the Engineer's Name.",
-      },
-
-      {
-        type: "input",
-        name: "EngineerID",
-        message: "Enter the Engineer's ID.",
-      },
-
-      {
-        type: "input",
-        name: "EngineerEmail",
-        message: "Enter the Engineer's Email Address.",
-      },
-
-      {
-        type: "input",
-        name: "EngineerGithub",
-        message: "Enter the Engineer's Github Account.",
-      },
+    ])
     
-    ]);
+    .then((data) => {
+      
+      //making const for manager to add new data 
+      const manager = new Manager(data.Manager, data.ManagerID, data.ManagerEmail, data.ManagerPhoneNumber);
+      //using push to push new data to a new array
+      teamMembers.push(manager);
+      console.log(manager);
+      addEmployee();
+      
+    }
+      );
 
-    //Add new Intern 
-    const addIntern = () =>  
-    inquirer.prompt([
-      {
-        type: "input",
-        name: "Intern",
-        message: "Enter the Intern's Name.",
-      },
 
-      {
-        type: "input",
-        name: "InternID",
-        message: "Enter the Intern's ID.",
-      },
-
-      {
-        type: "input",
-        name: "InternEmail",
-        message: "Enter the Intern's Email Address.",
-      },
-
-      {
-        type: "input",
-        name: "InternSchool",
-        message: "Enter the Intern's School.",
-      },
     
-    ]);

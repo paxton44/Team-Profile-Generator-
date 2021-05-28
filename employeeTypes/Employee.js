@@ -54,7 +54,7 @@ class Employee {
     //employeeRole
     getEmployeeRole() {
 
-        return this.employeeRole;
+        return 'Employee';
 
  
 

@@ -36,6 +36,7 @@ const promptUser = () =>
     },
   ])
 
+
   .then((data) => {
     //Making sure an id is established 
     const id = 1;
@@ -45,10 +46,10 @@ const promptUser = () =>
     //using push to push new data to a new array
     teamMembers.push(manager);
     
-    //making const for engineer to add new data from module.exports Engineer 
-    const engineer = new Engineer(data.companyName, id, data.email, data.officePhoneNumber);
-    //using push to push new data to a new array
-    teamMembers.push(engineer);
+    // //making const for engineer to add new data from module.exports Engineer 
+    // const engineer = new Engineer(data.companyName, id, data.email, data.github);
+    // //using push to push new data to a new array
+    // teamMembers.push(engineer);
     
     
     
@@ -66,11 +67,103 @@ const promptUser = () =>
     promptUser();
 
     //Add new Employee function that includes:
+    function addEmployee() 
+    inquirer.prompt([
+      {
+        type: "list",
+        name: "addEmployee",
+        message: "Select from the options below",
+        options: ["Manager", "Engineer", "Intern", "N/A I do not want to create a new employee."],
+      },
+    
+    ])
+    addEmployee();
+
 
     //Add new Manager
+    const addManager = () => 
+    inquirer.prompt([
+      {
+        type: "input",
+        name: "Manager",
+        message: "Enter the Manager's Name.",
+      },
+
+      {
+        type: "input",
+        name: "ManagerID",
+        message: "Enter the Manager's ID.",
+      },
+
+      {
+        type: "input",
+        name: "ManagerEmail",
+        message: "Enter the Manager's Email Address.",
+      },
+
+      {
+        type: "input",
+        name: "ManagerPhoneNumber",
+        message: "Enter the Manager's Phone Number.",
+      },
+    
+    ]);
+
 
     //Add new Engineer 
+    const addEngineer = () =>  
+    inquirer.prompt([
+      {
+        type: "input",
+        name: "Engineer",
+        message: "Enter the Engineer's Name.",
+      },
+
+      {
+        type: "input",
+        name: "EngineerID",
+        message: "Enter the Engineer's ID.",
+      },
+
+      {
+        type: "input",
+        name: "EngineerEmail",
+        message: "Enter the Engineer's Email Address.",
+      },
+
+      {
+        type: "input",
+        name: "EngineerGithub",
+        message: "Enter the Engineer's Github Account.",
+      },
+    
+    ]);
 
     //Add new Intern 
+    const addIntern = () =>  
+    inquirer.prompt([
+      {
+        type: "input",
+        name: "Intern",
+        message: "Enter the Intern's Name.",
+      },
 
+      {
+        type: "input",
+        name: "InternID",
+        message: "Enter the Intern's ID.",
+      },
 
+      {
+        type: "input",
+        name: "InternEmail",
+        message: "Enter the Intern's Email Address.",
+      },
+
+      {
+        type: "input",
+        name: "InternSchool",
+        message: "Enter the Intern's School.",
+      },
+    
+    ]);

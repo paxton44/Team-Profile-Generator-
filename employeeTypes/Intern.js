@@ -7,11 +7,14 @@ class Intern extends Employee {
     // Just like constructor functions, classes can accept arguments
     //use the prompt questions in constructor
     //looked at activity 28 in the word.js for an example of class constructors 
-    constructor(name, id, email, github ) {
-        this.name = name;
-        this.id = id;
-        this.email = email;
+    constructor(name, id, email, InternSchool ) {
+        super(name, id, email);
+        this.InternSchool = InternSchool;
 
+    }
+
+    getInternSchool(){
+        return this.InternSchool;
     }
 
     // //name

@@ -14,7 +14,8 @@ const teamMembers = [];
 
 //make questions for team member (use node js mini project as solid example.)
 const promptUser = () =>
-  inquirer.prompt([{
+  inquirer.prompt([
+    {
       type: 'input',
       name: 'companyName',
       message: "Enter your Company's name",
@@ -22,17 +23,17 @@ const promptUser = () =>
     {
       type: 'input',
       name: 'id',
-      message: "Enter the Manager's ID number.",
+      message: "Enter the Company's ID number.",
     },
     {
       type: 'input',
       name: 'email',
-      message: "Enter the Manager's email address.",
+      message: "Enter the Company's email address.",
     },
     {
       type: 'input',
       name: 'officePhoneNumber',
-      message: "Enter the Manager's phone number.",
+      message: "Enter the Company's phone number.",
     },
   ])
 
@@ -127,4 +128,86 @@ const promptUser = () =>
       );
 
 
+    //Add new Engineer 
+    const addEngineer = () =>  
+    inquirer.prompt([
+      {
+        type: "input",
+        name: "Engineer",
+        message: "Enter the Engineer's Name.",
+      },
+
+      {
+        type: "input",
+        name: "EngineerID",
+        message: "Enter the Engineer's ID.",
+      },
+
+      {
+        type: "input",
+        name: "EngineerEmail",
+        message: "Enter the Engineer's Email Address.",
+      },
+
+      {
+        type: "input",
+        name: "EngineerGithub",
+        message: "Enter the Engineer's Github Account.",
+      },
     
+    ])
+
+    .then((data) => {
+      
+      //making const for manager to add new data 
+      const engineer = new Engineer(data.Engineer, data.EngineerID, data.EngineerEmail, data.EngineerGithub);
+      //using push to push new data to a new array
+      teamMembers.push(engineer);
+      console.log(engineer);
+      addEmployee();
+      
+    }
+      );
+
+
+      //Add new Intern
+    const addIntern = () =>  
+    inquirer.prompt([
+      {
+        type: "input",
+        name: "Intern",
+        message: "Enter the Intern's Name.",
+      },
+
+      {
+        type: "input",
+        name: "InternID",
+        message: "Enter the Intern's ID.",
+      },
+
+      {
+        type: "input",
+        name: "InternEmail",
+        message: "Enter the Intern's Email Address.",
+      },
+
+      {
+        type: "input",
+        name: "InternSchool",
+        message: "Enter the Intern's current School.",
+      },
+    
+    ])
+
+    .then((data) => {
+      
+      //making const for manager to add new data 
+      const intern = new Intern(data.Intern, data.InternID, data.InternEmail, data.InternSchool);
+      //using push to push new data to a new array
+      teamMembers.push(intern);
+      console.log(intern);
+      addEmployee();
+      
+    }
+      );
+

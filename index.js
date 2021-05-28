@@ -43,7 +43,7 @@ const promptUser = () =>
     const manager = new Manager(data.companyName, data.id, data.email, data.officePhoneNumber);
     //using push to push new data to a new array
     teamMembers.push(manager);
-    console.log(teamMembers);
+    
     
     //calls add employee function to continue prompting the user.
     addEmployee();
@@ -123,6 +123,7 @@ const promptUser = () =>
       teamMembers.push(manager);
       console.log(manager);
       addEmployee();
+      console.log(teamMembers);
       
     }
       );
@@ -165,6 +166,7 @@ const promptUser = () =>
       teamMembers.push(engineer);
       console.log(engineer);
       addEmployee();
+      console.log(teamMembers);
       
     }
       );
@@ -207,7 +209,8 @@ const promptUser = () =>
       teamMembers.push(intern);
       console.log(intern);
       addEmployee();
-      
+      console.log(teamMembers);
     }
+    
       );
 

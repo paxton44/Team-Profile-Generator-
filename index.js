@@ -3,17 +3,14 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require('path');
 
-
 //consts for each type of employee
-const Employee = require('./library/employee');
-const Engineer = require('./library/engineer');
-const Intern = require('./library/intern');
-const Manager = require('./library/manager');
+const Employee = require('./employeeTypes/Employee');
+const Manager = require('./employeeTypes/Manager');
+const Engineer = require('./employeeTypes/Engineer');
+const Intern = require('./employeeTypes/Intern');
 
 //Array for all team members to get pushed into to be displayed on html cards
 const teamMembers = [];
-
-
 
 //make questions for team member (use node js mini project as solid example.)
 const promptUser = () =>
@@ -54,6 +51,7 @@ const promptUser = () =>
   }
     );
 
+    //Calls the user prompt
     promptUser();
 
     //Add new Employee function that includes:

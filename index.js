@@ -42,9 +42,17 @@ const promptUser = () =>
 
     //making const for manager to add new data 
     const manager = new Manager(data.companyName, id, data.email, data.officePhoneNumber);
-    
     //using push to push new data to a new array
     teamMembers.push(manager);
+    
+    //making const for engineer to add new data from module.exports Engineer 
+    const engineer = new Engineer(data.companyName, id, data.email, data.officePhoneNumber);
+    //using push to push new data to a new array
+    teamMembers.push(engineer);
+    
+    
+    
+    
     console.log(teamMembers);
 
     //calling addNewTeamMember to actually trigger adding a new member 

@@ -48,6 +48,7 @@ const promptUser = () =>
 
     //calling addNewTeamMember to actually trigger adding a new member 
     addNewTeamMember();
+    
   }
     );
 

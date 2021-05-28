@@ -3,7 +3,7 @@ const Employee = require("./Employee");
 
 
 //Making a class constructor just like my Employee module to be exported
-class Engineer extends Employee {
+class Manager extends Employee {
     // Just like constructor functions, classes can accept arguments
     //use the prompt questions in constructor
     //looked at activity 28 in the word.js for an example of class constructors 
@@ -47,7 +47,7 @@ class Engineer extends Employee {
     getEmployeeRole() {
         // return this.employeeRole;
         //just returning the variable Engineer because it encapsulates all of the data associated with creating an Engineer role. 
-        return "Engineer";
+        return "Manager";
 
  
 
@@ -56,4 +56,4 @@ class Engineer extends Employee {
 
 }
 
-module.exports = Engineer
+module.exports = Manager

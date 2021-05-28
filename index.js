@@ -10,6 +10,10 @@ const Engineer = require('./library/engineer');
 const Intern = require('./library/intern');
 const Manager = require('./library/manager');
 
+//Array for all team members to get pushed into to be displayed on html cards
+const teamMembers = [];
+
+
 
 //make questions for team member (use node js mini project as solid example.)
 const promptUser = () =>
@@ -40,12 +44,24 @@ const promptUser = () =>
     const id = 1;
 
     //making const for manager to add new data 
-    const manager = new Manager(data.name, data.id, data.email, data.phoneManager);
+    const manager = new Manager(data.companyName, id, data.email, data.phoneManager);
     
     //using push to push new data to a new array
-    team.push(manager);
+    teamMembers.push(manager);
 
-    //calling addMember to actually trigger adding a new member 
-    addMember();
+    //calling addNewTeamMember to actually trigger adding a new member 
+    addNewTeamMember();
+  }
+    );
 
-  });
+    promptUser();
+
+    //Add new Employee function that includes:
+
+    //Add new Manager
+
+    //Add new Engineer 
+
+    //Add new Intern 
+
+

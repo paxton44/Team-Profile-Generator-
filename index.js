@@ -31,7 +31,7 @@ const promptUser = () =>
     },
     {
       type: 'input',
-      name: 'phoneManager',
+      name: 'officePhoneNumber',
       message: "Enter the Manager's phone number.",
     },
   ])
@@ -41,13 +41,15 @@ const promptUser = () =>
     const id = 1;
 
     //making const for manager to add new data 
-    const manager = new Manager(data.companyName, id, data.email, data.phoneManager);
+    const manager = new Manager(data.companyName, id, data.email, data.officePhoneNumber);
     
     //using push to push new data to a new array
     teamMembers.push(manager);
+    console.log(teamMembers);
 
     //calling addNewTeamMember to actually trigger adding a new member 
-    addNewTeamMember();
+    // addNewTeamMember();
+    // console.log(data);
     
   }
     );

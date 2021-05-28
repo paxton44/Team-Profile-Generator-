@@ -1,8 +1,8 @@
 /* Jumbotron */
 h1 {
-  background-color: rgb(255, 30, 0);
+  background-color: #D3A277;
   text-align: center;
-  color: white;
+  color: #EEEBE3;
   font-size: large;
 
 
@@ -11,11 +11,19 @@ h1 {
 
 /* Team Cards */
 .card {
-background-color: cornflowerblue;
-color: white;
+background-color: #819A95;
+color: black;
 
 }
+
+.card-body {
+  background-color: EEEBE3;
+};
 
 .list-group-item {
     color: black;
 }
+
+body {
+background-color: #C1D7BF;
+};

@@ -3,6 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require('path');
 
+
 //consts for each type of employee
 const Employee = require('./library/employee');
 const Engineer = require('./library/engineer');
@@ -19,7 +20,7 @@ const promptUser = () =>
     },
     {
       type: 'input',
-      name: 'manager',
+      name: 'id',
       message: "Enter the Manager's ID number.",
     },
     {
@@ -35,9 +36,16 @@ const promptUser = () =>
   ])
 
   .then((data) => {
+    //Making sure an id is established 
     const id = 1;
-    const manager = new Manager(data.name, id, data.email, data.officeNumber);
+
+    //making const for manager to add new data 
+    const manager = new Manager(data.name, data.id, data.email, data.phoneManager);
+    
+    //using push to push new data to a new array
     team.push(manager);
+
+    //calling addMember to actually trigger adding a new member 
     addMember();
 
   });

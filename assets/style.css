@@ -4,6 +4,7 @@ h1 {
   text-align: center;
   color: #EEEBE3;
   font-size: large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 
     
@@ -13,12 +14,13 @@ h1 {
 .card {
 background-color: #819A95;
 color: black;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
 
 .card-body {
   background-color: EEEBE3;
-};
+}
 
 .list-group-item {
     color: black;
@@ -26,4 +28,53 @@ color: black;
 
 body {
 background-color: #C1D7BF;
-};
+}
+
+
+
+html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+
+/* Animated background from freefrontend.com 
+https://codepen.io/chris22smith/pen/RZogMa 
+I'm practicing integrating new stylistic skills */
+.bg {
+  animation:slide 23s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #819A95 50%, #C1D7BF 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:24s;
+}
+
+.bg3 {
+  animation-duration:25s;
+}
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+

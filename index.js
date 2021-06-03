@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require('path');
+const newTeamMemberCards = require("./employeeTypes/teamCardGenerator")
 
 //consts for each type of employee
 const Employee = require('./employeeTypes/Employee');

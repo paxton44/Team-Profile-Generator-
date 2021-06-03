@@ -44,7 +44,7 @@ body {
 https://codepen.io/chris22smith/pen/RZogMa 
 I'm practicing integrating new stylistic skills */
 .bg {
-  animation:slide 23s ease-in-out infinite alternate;
+  animation:slide 43s ease-in-out infinite alternate;
   background-image: linear-gradient(-60deg, #819A95 50%, #C1D7BF 50%);
   bottom:0;
   left:-50%;
@@ -57,11 +57,11 @@ I'm practicing integrating new stylistic skills */
 
 .bg2 {
   animation-direction:alternate-reverse;
-  animation-duration:24s;
+  animation-duration:44s;
 }
 
 .bg3 {
-  animation-duration:25s;
+  animation-duration:45s;
 }
 
 h1 {

@@ -14,16 +14,22 @@ const Intern = require('./employeeTypes/Intern');
 const teamMembers = [];
 
 //Var for teamMemberData
-var teamMemberCardData;
+let teamMemberCardData;
 
 //var for different company names
-var companyName;
+let companyName;
 
 //make questions for team member (use node js mini project as solid example.)
 const promptUser = () =>
-  inquirer.prompt([{
+  inquirer.prompt([
+    {
       type: 'input',
       name: 'companyName',
+      message: "Enter your Company's name",
+    },
+    {
+      type: 'input',
+      name: 'supervisorName',
       message: "Enter your Supervisor's name",
     },
     {
@@ -47,6 +53,9 @@ const promptUser = () =>
   .then((data) => {
     //making const for manager to add new data 
     const manager = new Manager(data.companyName, data.id, data.email, data.officePhoneNumber);
+    
+    companyName = data.companyName
+    
     //using push to push new data to a new array
     teamMembers.push(manager);
 
@@ -74,15 +83,18 @@ function addEmployee() {
 
       if (data.addEmployee === 'Manager') {
         addManager();
+
       } else if (data.addEmployee === 'Engineer') {
         addEngineer();
+
       } else if (data.addEmployee === 'Intern') {
         addIntern();
-      }
+
+      
       //adding the most important else if to this if statement. This is where we tell node to join the newly created data and get it put together to be generated into dynamic html.
-      else if (data.addEmployee === 'N/A I do not want to create a new employee.') {
-        teamMemberCardData = newTeamMemberCards(teamMembers).join("");
-        createTeamPage(teamMemberCardData);
+    }else if (data.addEmployee === "N/A I do not want to create a new employee.") {
+      teamMemberCardData  = newTeamMemberCards(teamMembers).join("");
+      createTeamPage(teamMemberCardData);
 
       } else return;
 
@@ -224,8 +236,8 @@ const addIntern = () =>
 // Writing HTML File 
 function writeToFile(data) {
   //this is the output route that node uses to print the user input data as an html file. 
-  const fileOut = path.resolve(__dirname, "generatedTeamPage");
-  const outPath = path.join(fileOut, companyName + '.html')
+  const htmlFileOut = path.resolve(__dirname, "generatedTeamPage");
+  const outPath = path.join(htmlFileOut, companyName + '.html')
   fs.writeFile(outPath, data, function (err) {
     if (err) throw err;
     console.log(companyName + '.html has been generated');
@@ -237,7 +249,7 @@ function createTeamPage(data) {
 
 
   writeToFile(
-    `<!doctype html>
+    `<!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="utf-8">

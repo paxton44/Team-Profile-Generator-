@@ -59,6 +59,17 @@ const newTeamMemberCards = Employee => {
        
     `;
     } 
+     
+    const renderArrayHTML = [];
+    console.log(Employee);
+    renderArrayHTML.push(renderArrayHTML
+      .filter(employee => employee.getRole() === "Manager")
+      .map(manager => generateManager(manager))
+    )
+    console.log(renderArrayHTML);
+    return renderArrayHTML;
+
+
   }
 
 module.exports = newTeamMemberCards

@@ -246,6 +246,7 @@ function writeToFile(data) {
 
 //Creating HTML file based off data passed in from the user inputs in node
 function createTeamPage(data) {
+  console.log(data);
 
 
   writeToFile(

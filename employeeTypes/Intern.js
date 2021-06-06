@@ -17,39 +17,8 @@ class Intern extends Employee {
         return this.InternSchool;
     }
 
-    // //name
-    // getName() {
-
-    //     return this.name;
-
-    // };
-
-
-    // //id
-    // getID() {
-
-    //     return this.id;
-
-    // };
-
-
-    // //email
-    // getEmail() {
-
-    //     return this.email;
-
-    // };
-
-    //don't need to use the stuff from Employee because its the parent of all the roles so the only necessary things to call are the github page link and to return the role
-    
-    //github
-
-    //return role
-
-    //employeeRole
     getEmployeeRole() {
-        // return this.employeeRole;
-        //just returning the variable Engineer because it encapsulates all of the data associated with creating an Engineer role. 
+ 
         return "Intern";
 
  

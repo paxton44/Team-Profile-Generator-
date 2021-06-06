@@ -1,24 +1,24 @@
 //used activity 11 in OOP for reference and jest documentation 
-const Employee = require("tests\employee.test.js");
+const { TestScheduler } = require("@jest/core");
+const Employee = require("../employeeTypes/Employee");
 
-test('creates new employee name', async () => {
-    const newEmployee = "Mitch";
-    const newEmployeeObject = new Employee(name);
-    expect(newEmployeeObject).toBe(newEmployee);
-  })
 
-  test('can create new employee ID', async () => {
-    const newEmployee = "Mitch";
-    const newEmployeeObject = new Employee(name);
-    expect(newEmployeeObject).toBe(newEmployee);
-  })
+//Can create new Employee 
 
-  test('can create new employee email', async () => {
-    const newEmployee = "Mitch";
-    const newEmployeeObject = new Employee(name);
-    expect(newEmployeeObject).toBe(newEmployee);
-  })
+test("Can Create a new Employee."), () => {
+
+}
 
 
 
+//Can create Employee Name 
 
+//Can create Employee ID
+
+//Can Create Employee Email
+
+//Can Get Employee Name
+
+//Can get Employee ID
+
+//Can get Employee Email 

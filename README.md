@@ -1,4 +1,4 @@
-# Mitch Flood's Read Me Generator  
+# Mitch Flood's Team Profile Generator  
 ## Description 
 This project allows anyone to use node.js to generate a professional team profile tree at work. All you need to do is run npm i to install the nescessary dependencies to run the application. Then you open the index.js file in node and run the command node index.js to launch the profile generator or run the command npm test to make sure the application will create profiles based on employee type. 
 ## Table of Contents

@@ -1,44 +1,28 @@
-# Team Profile Generator 
-
-# Description
-
-This application gives the user the opportunity to create a profile of their team at work!
-
+# Mitch Flood's Read Me Generator  
+## Description 
+This project allows anyone to use node.js to generate a professional team profile tree at work. All you need to do is run npm i to install the nescessary dependencies to run the application. Then you open the index.js file in node and run the command node index.js to launch the profile generator or run the command npm test to make sure the application will create profiles based on employee type. 
 ## Table of Contents
- * [User Story](#User-Story)
- * [Building Tools](#Building-Tools)
- * [References](#References)
-
-
-
-## Deployed Page
- [Here](https://paxton44.github.io/Work-Day-Scheduler/)
-
-
-
-## User Story
-<pre><code>As a User that has a busy work schedule I need an application that allows me to keep track of my team at work visually.</code></pre>
-
-## Building Tools 
- * CSS
- * Express
- * HTML
- * Javascript
- * Node.js
- 
- 
- 
-
-
-
-## References
-1. https://momentjs.com
-2. https://www.w3schools.com
-3. https://youtube.com
-4. https://developer.mozilla.org/en-US/docs/Web/JavaScript
- 
-
-
-## Demo
-
-![Demo](Assets/Images/app.png)
+[Installation](#Installation)
+[Usage](#Usage)
+[License](#License)
+[Contributing](#Contributing)
+[Tests](#Tests)
+[Questions](#Questions)
+## Installation 
+to install necessary dependencies, run the following command:
+npm i 
+## Usage 
+Feel free to use for any project!
+## License 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## Contributing 
+Anyone can contribute to the app, just submit changes on the paxton44 github account.
+## Tests 
+n/a
+## Questions
+If you have any questions, please contact me directly at mitchflood1@gmail.com 
+Visit my Github [here](https://github.com/paxton44)
+## Demo Read Me 
+![](./assets/DemoReadMe.png)
+## Demo Video
+https://www.loom.com/share/780b7296075242309e50a81bda842ced

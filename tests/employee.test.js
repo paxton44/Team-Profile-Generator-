@@ -1,12 +1,17 @@
 //used activity 11 in OOP for reference and jest documentation 
-const { TestScheduler } = require("@jest/core");
+
 const Employee = require("../employeeTypes/Employee");
+
+//Using activity 18 day care test as a ref for testing 
 
 
 //Can create new Employee 
 
-test("Can Create a new Employee."), () => {
+`test.todo`("Can Create a new Employee."), () => {
 
+  const m = new Employee(getName);
+
+  expect(typeof(m)).toBe("object");
 }
 
 
